@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 贡献指南
+    url: ../../CONTRIBUTING.md
+    about: 提交反馈前必读——规范、标题格式、证据要求
+  - name: 🏷️ 标签体系
+    url: ../../LABELS.md
+    about: 了解本仓库所有标签的含义
+  - name: 💬 讨论区
+    url: ../../discussions
+    about: 想闲聊或征求意见？去 Discussions 逛逛

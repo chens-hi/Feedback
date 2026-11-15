@@ -1,0 +1,70 @@
+name: 🐞 问题反馈
+description: 功能不正常、错误、卡顿、崩溃
+labels: ["问题", "status: 待确认"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请按字段填写，信息越全越容易被处理。
+        提交前建议先用关键词[搜索](../../issues)是否已有相同问题。
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: 项目名字
+      description: 选择所属项目
+      options:
+        - OmniEdit - 随心编辑器
+        - Shortcuts - 快捷图标
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      description: 一句话说清问题
+      placeholder: 如 编辑后保存失败，提示权限不足
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 复现步骤、预期 vs 实际、发生频率
+      placeholder: |
+        复现步骤：
+        1.
+        2.
+        3.
+
+        预期行为：
+        实际行为：
+
+        发生频率：必现 / 偶发
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志与截图
+      description: 可选。报错日志请用代码块包裹
+      placeholder: |
+        ```text
+        粘贴日志…
+        ```
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前自查
+      options:
+        - label: 我已搜索，确认没有重复问题
+        - label: 标题一句话说清了
+        - label: 描述写了复现步骤与预期/实际
+    validations:
+      required: true

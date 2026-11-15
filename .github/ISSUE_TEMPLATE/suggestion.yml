@@ -1,0 +1,62 @@
+name: 💡 建议反馈
+description: 改进现有功能、优化体验
+labels: ["建议", "status: 待确认"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢建议！请按字段填写，说清「现状 → 期望 → 理由」更易被采纳。
+        提交前建议先用关键词[搜索](../../issues)是否已有相同建议。
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: 项目名字
+      description: 选择所属项目
+      options:
+        - OmniEdit - 随心编辑器
+        - Shortcuts - 快捷图标
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      description: 一句话说清建议
+      placeholder: 如 建议支持拖动排序
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 建议描述
+      description: 现状、期望、理由 / 使用场景
+      placeholder: |
+        现状：现在是怎么样的，哪里不够好？
+
+        期望：希望变成什么样？
+
+        理由：为什么值得做？使用场景？
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 参考与截图
+      description: 可选。有没有别的软件做得好，可举例或配图
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前自查
+      options:
+        - label: 我已搜索，确认没有重复建议
+        - label: 标题一句话说清了
+        - label: 描述写了现状 / 期望 / 理由
+    validations:
+      required: true
